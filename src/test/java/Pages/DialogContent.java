@@ -60,6 +60,7 @@ public class DialogContent extends Parent {
                 return password1;
             case "password2":
                 return password2;
+            case "saveButton" : return saveButton;
         }
 
         return null;
