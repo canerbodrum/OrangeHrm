@@ -46,4 +46,18 @@ public class _03_CreateUserSteps {
     public void passwordNotMatch() {
         Assert.assertTrue(dc.passNotMatch.isDisplayed());
     }
+
+    @And("Role Select And Status Select as ESS")
+    public void roleSelectAndStatusSelectAsESS() {
+        dc.clickFunction(dc.userRoleSelect);
+        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//div[@role='listbox']/*"),2));
+        dc.clickFunction(dc.listbox.get(2));
+        dc.clickFunction(dc.statusSelect);
+        dc.clickFunction(dc.listbox.get(1));
+    }
+
+    @Then("invalid Not Match")
+    public void invalidNotMatch() {
+        Assert.assertTrue(dc.invalidNotMatch.isDisplayed());
+    }
 }
