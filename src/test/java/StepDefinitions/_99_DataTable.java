@@ -4,7 +4,9 @@ import Pages.DialogContent;
 import Pages.LeftNav;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import java.util.List;
 
@@ -39,5 +41,10 @@ public class _99_DataTable {
             WebElement element= dc.getWebElement(items.get(i).get(0));
             dc.sendKeysFunction(element, items.get(i).get(1));
         }
+    }
+
+    @Then("Required  message should be displayed")
+    public void requiredMessageShouldBeDisplayed() {
+        Assert.assertTrue(dc.required.isDisplayed());
     }
 }

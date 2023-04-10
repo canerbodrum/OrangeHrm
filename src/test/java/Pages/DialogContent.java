@@ -49,6 +49,8 @@ public class DialogContent extends Parent {
 
     @FindBy(xpath = "//span[text()='Passwords do not match']")
     public WebElement passNotMatch;
+    @FindBy(xpath = "(//span[@class='oxd-text oxd-text--span oxd-input-field-error-message oxd-input-group__message'][1])")
+    public WebElement required;
 
 
 
@@ -67,6 +69,8 @@ public class DialogContent extends Parent {
                 return password2;
             case "saveButton" : return saveButton;
             case "passNotMatch" : return passNotMatch;
+            case "required":
+                return required;
         }
 
         return null;
