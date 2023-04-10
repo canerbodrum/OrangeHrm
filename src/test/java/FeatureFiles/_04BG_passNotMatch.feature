@@ -10,9 +10,11 @@ Feature: Login as Admin
       | admin |
 
     And Click on the element in Dialog
-      | addBtn     |
+      | addBtn |
 
+    And User sending the keys in Dialog Content
+      | userName  | randomUser551 |
+      | password1 | Romdom.433  |
+      | password2 | Romdom.435   |
 
-
-
-
+    Then password not match
