@@ -20,3 +20,4 @@ Feature: Login as Admin
 
 
     And   fill up the form by entering the required info to the all input boxes I click on Save button
+    Then Required  message should be displayed
