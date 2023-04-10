@@ -14,6 +14,7 @@ public class DialogContent extends Parent {
     }
 
     @FindBy(css = "[name='username']")
+
     public WebElement idBox;
     @FindBy(css = "[name='password']")
     public WebElement pass;
@@ -31,6 +32,8 @@ public class DialogContent extends Parent {
     public WebElement statusSelect;
     @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div[2]/div[1]/button")
     public WebElement addBtn;
+    @FindBy(css = "[class='oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space']")
+    public WebElement save;
     @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[2]/div/div[2]/div/div/input")
     public WebElement employee;
 
@@ -46,6 +49,8 @@ public class DialogContent extends Parent {
 
     @FindBy(xpath = "/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[3]/button[2]")
     public WebElement saveButton;
+    @FindBy(xpath = "(//span[@class='oxd-text oxd-text--span oxd-input-field-error-message oxd-input-group__message'][1])")
+    public WebElement required;
 
     public WebElement getWebElement(String strButton) {
 
@@ -60,6 +65,10 @@ public class DialogContent extends Parent {
                 return password1;
             case "password2":
                 return password2;
+            case "save":
+                return save;
+            case "required":
+                return required;
         }
 
         return null;

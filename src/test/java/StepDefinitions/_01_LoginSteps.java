@@ -4,7 +4,9 @@ import Pages.DialogContent;
 import Pages.LeftNav;
 import Utilities.GWD;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.testng.Assert;
 
 public class _01_LoginSteps {
     DialogContent dc = new DialogContent();
@@ -23,4 +25,8 @@ public class _01_LoginSteps {
         dc.clickFunction(dc.login);
     }
 
+    @Then("Required  message should be displayed")
+    public void requiredMessageShouldBeDisplayed() {
+        Assert.assertTrue(dc.required.isDisplayed());
+    }
 }
