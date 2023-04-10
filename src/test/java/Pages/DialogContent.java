@@ -50,7 +50,7 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//span[text()='Passwords do not match']")
     public WebElement passNotMatch;
 
-    @FindBy(xpath = "//span[text()='Passwords do not match']")
+    @FindBy(xpath = "//span[text()='Invalid']")
     public WebElement invalidNotMatch;
 
 
