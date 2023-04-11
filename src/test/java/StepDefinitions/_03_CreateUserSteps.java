@@ -16,10 +16,9 @@ import java.security.Key;
 import java.time.Duration;
 
 public class _03_CreateUserSteps {
-    Robot robot=new Robot();
-    LeftNav ln=new LeftNav();
-    DialogContent dc=new DialogContent();
-    WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
+    LeftNav ln = new LeftNav();
+    DialogContent dc = new DialogContent();
+    WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
 
     public _03_CreateUserSteps() throws AWTException {
     }
@@ -27,14 +26,14 @@ public class _03_CreateUserSteps {
     @And("fill up the form by entering the required info to the all input boxes I click on Save button")
     public void fillUpTheFormByEnteringTheRequiredInfoToTheAllInputBoxesIClickOnSaveButton() {
         dc.clickFunction(dc.userRoleSelect);
-        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//div[@role='listbox']/*"),2));
+        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//div[@role='listbox']/*"), 2));
         dc.clickFunction(dc.listbox.get(2));
         dc.clickFunction(dc.statusSelect);
         dc.clickFunction(dc.listbox.get(1));
-        String admin=dc.eemployeName.getText();
-        String bosluk= String.valueOf(admin.indexOf(" "));
-        String soyad=admin.substring(Integer.parseInt(bosluk));
-        dc.sendKeysFunction(dc.employee,admin);
+        String admin = dc.eemployeName.getText();
+        String bosluk = String.valueOf(admin.indexOf(" "));
+        String soyad = admin.substring(Integer.parseInt(bosluk));
+        dc.sendKeysFunction(dc.employee, admin);
         wait.until(ExpectedConditions.stalenessOf(dc.listbox.get(0)));
         wait.until(ExpectedConditions.textToBePresentInElement(dc.listbox.get(0), soyad));
         dc.clickFunction(dc.listbox.get(0));
@@ -50,7 +49,7 @@ public class _03_CreateUserSteps {
     @And("Role Select And Status Select as ESS")
     public void roleSelectAndStatusSelectAsESS() {
         dc.clickFunction(dc.userRoleSelect);
-        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//div[@role='listbox']/*"),2));
+        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//div[@role='listbox']/*"), 2));
         dc.clickFunction(dc.listbox.get(2));
         dc.clickFunction(dc.statusSelect);
         dc.clickFunction(dc.listbox.get(1));
@@ -59,5 +58,11 @@ public class _03_CreateUserSteps {
     @Then("invalid Not Match")
     public void invalidNotMatch() {
         Assert.assertTrue(dc.invalidNotMatch.isDisplayed());
+    }
+
+
+    @Then("Should be at least less characters")
+    public void shouldBeAtLeastLessCharacters() {
+        Assert.assertTrue(dc.userCharacter.isDisplayed());
     }
 }

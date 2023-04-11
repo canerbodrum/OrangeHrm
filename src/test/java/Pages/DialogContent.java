@@ -53,6 +53,8 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//span[text()='Invalid']")
     public WebElement invalidNotMatch;
 
+    @FindBy(xpath = "//span[text()='Should be at least 5 characters']")
+    public WebElement userCharacter;
 
 
 
@@ -74,7 +76,7 @@ public class DialogContent extends Parent {
             case "passNotMatch" : return passNotMatch;
             case "employee" : return employee;
             case "invalidNotMatch" : return invalidNotMatch;
-
+            case "userCharacter" : return userCharacter;
         }
 
         return null;
