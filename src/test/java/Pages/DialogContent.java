@@ -9,6 +9,7 @@ import java.util.List;
 
 public class DialogContent extends Parent {
 
+
     public DialogContent() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
@@ -52,6 +53,11 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "(//span[@class='oxd-text oxd-text--span oxd-input-field-error-message oxd-input-group__message'][1])")
     public WebElement required;
 
+    @FindBy(xpath = "//span[text()='Invalid']")
+    public WebElement invalidNotMatch;
+
+    @FindBy(xpath = "//span[text()='Should be at least 5 characters']")
+    public WebElement userCharacter;
 
 
     public WebElement getWebElement(String strButton) {
@@ -69,8 +75,10 @@ public class DialogContent extends Parent {
                 return password2;
             case "saveButton" : return saveButton;
             case "passNotMatch" : return passNotMatch;
-            case "required":
-                return required;
+            case "required": return required;
+            case "invalidNotMatch": return invalidNotMatch;
+            case "employee": return employee;
+            case "userCharacter": return userCharacter;
         }
 
         return null;
