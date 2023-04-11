@@ -11,8 +11,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.security.Key;
 import java.time.Duration;
 
 public class _03_CreateUserSteps {
@@ -65,5 +63,9 @@ public class _03_CreateUserSteps {
     @Then("Should be at least less characters")
     public void shouldBeAtLeastLessCharacters() {
         Assert.assertTrue(dc.userCharacter.isDisplayed());
+    }
+
+    @Then("Allready exist message should be display")
+    public void allreadyExistMessageShouldBeDisplay() {
     }
 }
