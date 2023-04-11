@@ -67,5 +67,6 @@ public class _03_CreateUserSteps {
 
     @Then("Allready exist message should be display")
     public void allreadyExistMessageShouldBeDisplay() {
+        Assert.assertTrue(dc.allreadyexistmessage.isDisplayed());
     }
 }

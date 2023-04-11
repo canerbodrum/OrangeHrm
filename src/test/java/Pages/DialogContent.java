@@ -58,6 +58,9 @@ public class DialogContent extends Parent {
 
     @FindBy(xpath = "//span[text()='Should be at least 5 characters']")
     public WebElement userCharacter;
+    @FindBy(xpath = "/html/body/div/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[4]/div/span")
+    public WebElement allreadyexistmessage;
+
 
 
     public WebElement getWebElement(String strButton) {
@@ -79,6 +82,7 @@ public class DialogContent extends Parent {
             case "invalidNotMatch": return invalidNotMatch;
             case "employee": return employee;
             case "userCharacter": return userCharacter;
+            case "allreadyexistmessage": return allreadyexistmessage;
         }
 
         return null;
