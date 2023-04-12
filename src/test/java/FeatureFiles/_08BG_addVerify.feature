@@ -9,4 +9,13 @@ Feature: Login as Admin
     And Click on the element in LeftNav
       | admin |
 
+
+
+
+
+
+
+
+
+
     Then add button is displayed
