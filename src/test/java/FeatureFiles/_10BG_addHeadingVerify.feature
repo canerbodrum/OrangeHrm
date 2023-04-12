@@ -12,4 +12,9 @@ Feature: Login as Admin
     And Click on the element in Dialog
       | addBtn |
 
+
+
+
+
+
     Then Add User Heading is displayed
