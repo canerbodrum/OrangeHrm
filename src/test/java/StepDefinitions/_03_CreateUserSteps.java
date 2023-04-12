@@ -99,8 +99,12 @@ public class _03_CreateUserSteps {
         wait.until(ExpectedConditions.visibilityOf(dc.cancelButton));
         Assert.assertTrue(dc.cancelButton.isDisplayed());
 
+    }
 
-
+    @Then("Add User Heading is displayed")
+    public void addUserHeadingIsDisplayed() {
+        wait.until(ExpectedConditions.visibilityOf(dc.headingVerify));
+        Assert.assertTrue(dc.headingVerify.isDisplayed());
 
     }
 }

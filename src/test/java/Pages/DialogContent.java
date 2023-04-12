@@ -66,6 +66,10 @@ public class DialogContent extends Parent {
     public WebElement cancelButton;
 
 
+    @FindBy(xpath = "//*[text()='Add User']")
+    public WebElement headingVerify;
+
+
 
 
 
@@ -93,6 +97,8 @@ public class DialogContent extends Parent {
             case "cancelButton": return cancelButton;
             case "statusSelect": return statusSelect;
             case "userRoleSelect": return userRoleSelect;
+            case "headingVerify": return headingVerify;
+
         }
 
         return null;
