@@ -1,6 +1,6 @@
 Feature: Login as Admin
 
-  Scenario: As an Admin user I should be able to create an ESS user account so that ESS user will be having his own valid username and valid password.
+  Scenario: As an Admin user I should be able to see all the required elements displayed, when I navigate to the User Management page
 
     Given Navigate to Site
 

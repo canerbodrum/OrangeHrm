@@ -107,4 +107,14 @@ public class _03_CreateUserSteps {
         Assert.assertTrue(dc.headingVerify.isDisplayed());
 
     }
+
+    @Then("password Should have at least characters")
+    public void passwordShouldHaveAtLeastCharacters() {
+        Assert.assertTrue(dc.lessPass.isDisplayed());
+    }
+
+    @Then("Try Different Pass is displayed")
+    public void tryDifferentPassIsDisplayed() {
+        Assert.assertTrue(dc.differentPass.isDisplayed());
+    }
 }

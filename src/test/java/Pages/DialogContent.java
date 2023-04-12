@@ -65,12 +65,15 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/form/div[3]/button[1]")
     public WebElement cancelButton;
 
-
     @FindBy(xpath = "//*[text()='Add User']")
     public WebElement headingVerify;
 
 
+    @FindBy(xpath = "//span[text()='Should have at least 8 characters']")
+    public WebElement lessPass;
 
+    @FindBy(xpath = "//span[text()='Your password must contain a lower-case letter, an upper-case letter, a digit and a special character. Try a different password']\n")
+    public WebElement differentPass;
 
 
 
@@ -98,6 +101,9 @@ public class DialogContent extends Parent {
             case "statusSelect": return statusSelect;
             case "userRoleSelect": return userRoleSelect;
             case "headingVerify": return headingVerify;
+            case "lessPass": return lessPass;
+            case "differentPass": return differentPass;
+
 
         }
 
