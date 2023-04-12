@@ -66,4 +66,10 @@ public class _03_CreateUserSteps {
     public void shouldBeAtLeastLessCharacters() {
         Assert.assertTrue(dc.userCharacter.isDisplayed());
     }
+
+    @Then("add button is displayed")
+    public void addButtonIsDisplayed() {
+        wait.until(ExpectedConditions.visibilityOf(dc.verifyAddButton));
+        Assert.assertTrue(dc.verifyAddButton.isDisplayed());
+    }
 }
