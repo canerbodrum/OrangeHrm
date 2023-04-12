@@ -72,4 +72,35 @@ public class _03_CreateUserSteps {
         wait.until(ExpectedConditions.visibilityOf(dc.verifyAddButton));
         Assert.assertTrue(dc.verifyAddButton.isDisplayed());
     }
+
+    @Then("all required elements is displayed")
+    public void allRequiredElementsIsDisplayed() {
+        wait.until(ExpectedConditions.visibilityOf(dc.userRoleSelect));
+        Assert.assertTrue(dc.userRoleSelect.isDisplayed());
+
+        wait.until(ExpectedConditions.visibilityOf(dc.employee));
+        Assert.assertTrue(dc.employee.isDisplayed());
+
+        wait.until(ExpectedConditions.visibilityOf(dc.statusSelect));
+        Assert.assertTrue(dc.statusSelect.isDisplayed());
+
+        wait.until(ExpectedConditions.visibilityOf(dc.userName));
+        Assert.assertTrue(dc.userName.isDisplayed());
+
+        wait.until(ExpectedConditions.visibilityOf(dc.password1));
+        Assert.assertTrue(dc.password1.isDisplayed());
+
+        wait.until(ExpectedConditions.visibilityOf(dc.password2));
+        Assert.assertTrue(dc.password2.isDisplayed());
+
+        wait.until(ExpectedConditions.visibilityOf(dc.saveButton));
+        Assert.assertTrue(dc.saveButton.isDisplayed());
+
+        wait.until(ExpectedConditions.visibilityOf(dc.cancelButton));
+        Assert.assertTrue(dc.cancelButton.isDisplayed());
+
+
+
+
+    }
 }

@@ -62,6 +62,11 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//*[text()=' Add ']")
     public WebElement verifyAddButton;
 
+    @FindBy(xpath = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/form/div[3]/button[1]")
+    public WebElement cancelButton;
+
+
+
 
 
 
@@ -85,6 +90,9 @@ public class DialogContent extends Parent {
             case "employee": return employee;
             case "userCharacter": return userCharacter;
             case "verifyAddButton": return verifyAddButton;
+            case "cancelButton": return cancelButton;
+            case "statusSelect": return statusSelect;
+            case "userRoleSelect": return userRoleSelect;
         }
 
         return null;
