@@ -1,6 +1,6 @@
 Feature: Login as Admin
 
-  Scenario: As an Admin user I should be able to create an ESS user account so that ESS user will be having his own valid username and valid password.
+  Scenario: As an Admin user I should be able to validate creating an ESS User account by providing only the Mandatory fields
 
 
     Given Navigate to Site

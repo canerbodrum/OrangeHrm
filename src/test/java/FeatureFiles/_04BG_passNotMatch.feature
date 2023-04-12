@@ -1,6 +1,6 @@
 Feature: Login as Admin
 
-  Scenario: As an Admin user I should be able to create an ESS user account so that ESS user will be having his own valid username and valid password.
+  Scenario: As an Admin user I should be able to see notification messages displayed, when I enter different values in to the “password’ and “password confirm” fields
 
     Given Navigate to Site
 

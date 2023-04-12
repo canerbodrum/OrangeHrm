@@ -11,6 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.security.Key;
 import java.time.Duration;
 
 public class _03_CreateUserSteps {
@@ -65,8 +67,54 @@ public class _03_CreateUserSteps {
         Assert.assertTrue(dc.userCharacter.isDisplayed());
     }
 
-    @Then("Allready exist message should be display")
-    public void allreadyExistMessageShouldBeDisplay() {
-        Assert.assertTrue(dc.allreadyexistmessage.isDisplayed());
+    @Then("add button is displayed")
+    public void addButtonIsDisplayed() {
+        wait.until(ExpectedConditions.visibilityOf(dc.verifyAddButton));
+        Assert.assertTrue(dc.verifyAddButton.isDisplayed());
+    }
+
+    @Then("all required elements is displayed")
+    public void allRequiredElementsIsDisplayed() {
+        wait.until(ExpectedConditions.visibilityOf(dc.userRoleSelect));
+        Assert.assertTrue(dc.userRoleSelect.isDisplayed());
+
+        wait.until(ExpectedConditions.visibilityOf(dc.employee));
+        Assert.assertTrue(dc.employee.isDisplayed());
+
+        wait.until(ExpectedConditions.visibilityOf(dc.statusSelect));
+        Assert.assertTrue(dc.statusSelect.isDisplayed());
+
+        wait.until(ExpectedConditions.visibilityOf(dc.userName));
+        Assert.assertTrue(dc.userName.isDisplayed());
+
+        wait.until(ExpectedConditions.visibilityOf(dc.password1));
+        Assert.assertTrue(dc.password1.isDisplayed());
+
+        wait.until(ExpectedConditions.visibilityOf(dc.password2));
+        Assert.assertTrue(dc.password2.isDisplayed());
+
+        wait.until(ExpectedConditions.visibilityOf(dc.saveButton));
+        Assert.assertTrue(dc.saveButton.isDisplayed());
+
+        wait.until(ExpectedConditions.visibilityOf(dc.cancelButton));
+        Assert.assertTrue(dc.cancelButton.isDisplayed());
+
+    }
+
+    @Then("Add User Heading is displayed")
+    public void addUserHeadingIsDisplayed() {
+        wait.until(ExpectedConditions.visibilityOf(dc.headingVerify));
+        Assert.assertTrue(dc.headingVerify.isDisplayed());
+
+    }
+
+    @Then("password Should have at least characters")
+    public void passwordShouldHaveAtLeastCharacters() {
+        Assert.assertTrue(dc.lessPass.isDisplayed());
+    }
+
+    @Then("Try Different Pass is displayed")
+    public void tryDifferentPassIsDisplayed() {
+        Assert.assertTrue(dc.differentPass.isDisplayed());
     }
 }
